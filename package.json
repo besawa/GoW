@@ -1,6 +1,6 @@
 {
-  "name": "go-w",
-  "version": "0.0.0",
+  "name": "gow",
+  "version": "0.0.1",
   "main": "server/app.js",
   "dependencies": {
     "express": "~4.0.0",
