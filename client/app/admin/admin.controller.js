@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('goWApp')
+angular.module('gowApp')
   .controller('AdminCtrl', function ($scope, $http, Auth, User) {
 
     // Use the User $resource to fetch all users

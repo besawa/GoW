@@ -3,7 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('goWApp'));
+  beforeEach(module('gowApp'));
   beforeEach(module('socketMock'));
 
   var MainCtrl,

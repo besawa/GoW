@@ -3,7 +3,7 @@
 describe('Controller: GearsCtrl', function () {
 
   // load the controller's module
-  beforeEach(module('goWApp'));
+  beforeEach(module('gowApp'));
 
   var GearsCtrl, scope;
 

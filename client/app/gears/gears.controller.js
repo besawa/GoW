@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('goWApp')
+angular.module('gowApp')
   .controller('GearsCtrl', function ($scope) {
     $scope.message = 'Hello';
   });

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('goWApp')
+angular.module('gowApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [{
       'title': 'Home',

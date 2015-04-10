@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('goWApp')
+angular.module('gowApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('main', {

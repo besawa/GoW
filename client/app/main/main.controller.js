@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('goWApp')
+angular.module('gowApp')
   .controller('MainCtrl', function ($scope, $http, socket) {
     $scope.awesomeThings = [];
 

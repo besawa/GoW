@@ -3,7 +3,7 @@
 /**
  * Removes server error when user updates input
  */
-angular.module('goWApp')
+angular.module('gowApp')
   .directive('mongooseError', function () {
     return {
       restrict: 'A',
