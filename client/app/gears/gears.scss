@@ -1,0 +1,17 @@
+#gears {
+  .link {
+    stroke: #999;
+    stroke-opacity: .6;
+  }
+
+  .node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+  }
+
+  text {
+    font-size: 0.7em;
+    pointer-events: none;
+    text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+  }
+}

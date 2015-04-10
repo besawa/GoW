@@ -2,10 +2,10 @@
 
 angular.module('gowApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+    $scope.menu = [
+      {'title': 'Home', 'link': '/'},
+      {'title': 'Gears', 'link': '/gears'}
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;
