@@ -4,7 +4,8 @@ angular.module('gowApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
     $scope.menu = [
       {'title': 'Home', 'link': '/'},
-      {'title': 'Gears', 'link': '/gears'}
+      {'title': 'Gears', 'link': '/gears'},
+      {'title': 'Pages', 'link': '/pages'}
     ];
 
     $scope.isCollapsed = true;
