@@ -35,5 +35,12 @@ angular.module('gowApp')
       $modalInstance.dismiss('cancel');
     };
   })
-  .controller('PagesEditCtrl', function () {
+  .controller('PagesEditCtrl', function ($scope, $stateParams, Pages) {
+    $scope.page = Pages.get({id: $stateParams.id});
+    $scope.contents = [
+      {row: 0, col: 0, size: 8, body: 'content -0-0-8-'},
+      {row: 0, col: 8, size: 4, body: 'widget -0-8-4-'},
+      {row: 1, col: 0, size: 12, body: 'big content -1-0-12-'},
+      {row: 2, col: 4, size: 4, body: 'small widget -2-4-4-'}
+    ];
   });

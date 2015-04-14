@@ -1,0 +1,7 @@
+<div class="row content-box" ng-repeat="row in rows">
+  <div class="col-sm-{{box.size}}" ng-repeat="box in row.boxes">
+    <i class="fa fa-chevron-left" title="Increase size to the left"></i>
+    {{box.body}} | col-sm-{{box.size}}
+    <i class="fa fa-chevron-right" title="Increase size to the right"></i>
+  </div>
+</div>
