@@ -1,23 +1,28 @@
 $base-color: #e8e8e8;
 
 .content-box {
-  div {
+  > div {
     min-height: 100px;
     border: 1px solid lighten($base-color, 2%);
     color: $base-color;
+    padding-top: 20px;
 
-    .fa-chevron-left {
-      font-size: 2em;
-      left: -17px;
-      position: relative;
+    > .arrow {
       cursor: pointer;
+      position: absolute;
+      top: 0;
+
+      > .fa:hover {
+        color: darken($base-color, 10%);
+      }
     }
 
-    .fa-chevron-right {
-      font-size: 2em;
-      right: -26px;
-      position: relative;
-      cursor: pointer;
+    > .arrow-left {
+      left: 0;
+    }
+
+    > .arrow-right {
+      right: 0;
     }
   }
 }
