@@ -79,6 +79,10 @@ angular.module('gowApp')
             }
           }
         };
+
+        scope.selectBox = function (box) {
+          scope.selectedBox = box;
+        }
       }
     };
   });

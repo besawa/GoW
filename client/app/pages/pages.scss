@@ -1,4 +1,5 @@
 $base-color: #e8e8e8;
+$base-bgcolor: #fbfbfb;
 
 .content-box {
   > div {
@@ -24,5 +25,11 @@ $base-color: #e8e8e8;
     > .arrow-right {
       right: 0;
     }
+  }
+
+  > div.active {
+    color: darken($base-color, 15%);
+    border-color: darken($base-color, 10%);
+    background-color: $base-bgcolor;
   }
 }

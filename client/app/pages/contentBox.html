@@ -1,14 +1,14 @@
 <div class="row content-box" ng-repeat="row in rows">
-  <div class="col-sm-{{box.size}}" ng-repeat="box in row.boxes" ng-mouseenter="box.hovered = true"
-       ng-mouseleave="box.hovered = false">
-    <div class="arrow-left arrow" ng-show="box.hovered">
+  <div class="col-sm-{{box.size}}" ng-class="{active: selectedBox == box}" ng-repeat="box in row.boxes"
+       ng-mouseenter="box.hovered = true" ng-mouseleave="box.hovered = false" ng-click="selectBox(box)">
+    <div class="arrow-left arrow" ng-show="box.hovered || selectedBox == box">
       <i class="fa fa-chevron-left" title="Increase size to the left" ng-hide="!row.boxes[$index - 1].blank"
          ng-click="size(box, $index, true, true)"></i>
       <i class="fa fa-chevron-right" title="Decrease size from the left" ng-hide="box.size == 1"
          ng-click="size(box, $index, true, false)"></i>
     </div>
     {{box.body}} | col-sm-{{box.size}}
-    <div class="arrow-right arrow" ng-show="box.hovered">
+    <div class="arrow-right arrow" ng-show="box.hovered || selectedBox == box">
       <i class="fa fa-chevron-left" title="Decrease size from the right" ng-hide="box.size == 1"
          ng-click="size(box, $index, false, false)"></i>
       <i class="fa fa-chevron-right" title="Increase size to the right" ng-hide="!row.boxes[$index + 1].blank"
