@@ -5,7 +5,14 @@ var mongoose = require('mongoose'),
 
 var PageSchema = new Schema({
   name: String,
-  route: String
+  route: String,
+  menu: Boolean,
+  contents: [{
+    row: Number,
+    col: Number,
+    size: Number,
+    body: String
+  }]
 });
 
 module.exports = mongoose.model('Page', PageSchema);

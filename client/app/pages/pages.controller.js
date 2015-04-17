@@ -17,17 +17,16 @@ angular.module('gowApp')
       });
 
       modalInstance.result.then(function (page) {
-        // ok goes here
+        // save btn goes here
         Pages.save(page);
-        $scope.getPages();
-        $log.info(page + ' saved successfully');
+        // todo: navigate to edit page
       }, function () {
-        $log.info('Modal dismissed at: ' + new Date());
+        // cancel btn goes here
       });
     };
   })
   .controller('PagesModalCtrl', function ($scope, $modalInstance) {
-    $scope.ok = function () {
+    $scope.save = function () {
       $modalInstance.close({name: $scope.name, route: $scope.route});
     };
 
@@ -35,13 +34,11 @@ angular.module('gowApp')
       $modalInstance.dismiss('cancel');
     };
   })
-  .controller('PagesEditCtrl', function ($scope, $stateParams, Pages) {
+  .controller('PagesEditCtrl', function ($scope, $stateParams, $log, Pages) {
     $scope.page = Pages.get({id: $stateParams.id});
-    $scope.contents = [
-      {row: 0, col: 0, size: 8, body: 'content -0-0-8-'},
-      {row: 0, col: 8, size: 4, body: 'widget -0-8-4-'},
-      {row: 1, col: 0, size: 12, body: 'big content -1-0-12-'},
-      {row: 2, col: 4, size: 4, body: 'small widget -2-4-4-'},
-      {row: 2, col: 2, size: 1, body: 'tiny w -2-2-1-'}
-    ];
+
+    $scope.save = function () {
+      Pages.update({id: $scope.page._id}, $scope.page);
+      // todo: notify user
+    };
   });

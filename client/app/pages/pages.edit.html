@@ -1,5 +1,18 @@
 <div class="page-header">
-  <h1>{{page.name}} <small>{{page.route}}</small></h1>
+  <div class='pull-right'>
+    <button type="button" class="btn btn-primary" ng-click="save()">Save</button>
+    <a href="#" ui-sref="pages.list" class="btn btn-warning">Cancel</a>
+    <a href="#" ng-href="{{page.route}}" class="btn btn-default" target="_blank">View</a>
+  </div>
+
+  <h1>
+    <a href="#" editable-text="page.name">{{page.name}}</a>
+    <small>
+      <a href="#" editable-text="page.route">{{page.route}}</a>
+    </small>
+  </h1>
+
+  <a href="#" editable-checkbox="page.menu" e-title="Add to menu?">{{page.menu && 'In menu' || 'No menu'}}</a>
 </div>
 
-<div content-box="contents"></div>
+<div content-box="page.contents"></div>

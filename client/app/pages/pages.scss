@@ -25,6 +25,10 @@ $base-bgcolor: #fbfbfb;
     > .arrow-right {
       right: 0;
     }
+
+    .editable-wrap, .editable-controls, .box-editor {
+      width: 100%;
+    }
   }
 
   > div.active {
