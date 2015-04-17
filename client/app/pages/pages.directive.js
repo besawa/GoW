@@ -6,7 +6,8 @@ angular.module('gowApp')
       templateUrl: 'app/pages/contentBox.html',
       restrict: 'EA',
       scope: {
-        contents: '=contentBox'
+        contents: '=contentBox',
+        editMode: '='
       },
       controller: function ($scope, $log, $timeout, $interval) {
         $scope.rows = [];

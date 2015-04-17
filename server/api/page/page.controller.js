@@ -5,10 +5,22 @@ var Page = require('./page.model');
 
 // Get list of pages
 exports.index = function(req, res) {
-  Page.find(function (err, pages) {
-    if(err) { return handleError(res, err); }
-    return res.json(200, pages);
-  });
+  // get by route
+  if(req.query.route) {
+    var route = req.query.route;
+    if(route.indexOf('/') != 0) route = '/' + route;
+    Page.findOne({route: route}, function (err, page) {
+      if(err) { return handleError(res, err); }
+      if(!page) { return res.send(404); }
+      return res.json(page);
+    });
+  }
+  else { // get all
+    Page.find(function (err, pages) {
+      if(err) { return handleError(res, err); }
+      return res.json(200, pages);
+    });
+  }
 };
 
 // Get a single page

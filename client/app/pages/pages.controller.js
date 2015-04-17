@@ -41,4 +41,8 @@ angular.module('gowApp')
       Pages.update({id: $scope.page._id}, $scope.page);
       // todo: notify user
     };
+  })
+  .controller('PageCtrl', function ($scope, $stateParams, $log, Pages) {
+    // get page by url
+    $scope.page = Pages.get({route: $stateParams.route});
   });

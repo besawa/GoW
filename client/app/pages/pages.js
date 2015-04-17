@@ -18,5 +18,10 @@ angular.module('gowApp')
         url: '/:id/edit',
         templateUrl: 'app/pages/pages.edit.html',
         controller: 'PagesEditCtrl'
+      })
+      .state('page', { // page render view
+        url: '/*route',
+        templateUrl: 'app/pages/page.html',
+        controller: 'PageCtrl'
       });
   });
